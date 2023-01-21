@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+$PrimaryViolet:hsl(257, 40%, 49%);
+$PrimaryMagenta:hsl(300, 69%, 71%);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $PrimaryViolet;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.heading{
+    width: 100%;
+    padding: 60px 120px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+}
+.content{
+    display: flex;
+    width: 100%;
+    padding: 0 70px 0 120px;
+    .main{
+        padding: 70px;
+        font-weight: 750;
+        font-size: xx-large;
+        width: 500px;
+    }
+    .subtitle{
+        padding: 0 70px;
+        width: 600px;
+        line-height: 25px;
+    }
+    button{
+        margin: 20px 70px;
+        background-color: $PrimaryMagenta;
+        color: white;
+        border: 0px;
+        width: 180px;
+        padding: 15px 0;
+        border-radius: 25px;
+        box-shadow: 2px 2px 15px rgba(0,1,1,.5);
+        font-size: 16px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+}
+footer{
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+}
+.imgbg1{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    
+}
+.social-icons{
+    text-align: right;
+    font-size: x-large;
+    margin: 75px 460px;
+}
+@media only screen and (max-width: 800px){
+    .imgbg2{
+        display: block !important;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        width: 100%;
+        position: absolute;
+        z-index: -1;
+    }
+    .imgbg1{
+        display: none;
+    }
+}
+@media only screen and (max-width: 1300px){
+    .social-icons{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        letter-spacing: 3px;
+    }
+    .heading{
+        padding: 6vw;
+    }
+    .content{
+        margin: 0 auto;
+        width: 100%;
+        flex-direction: column;
+        padding: 2rem !important;
+        img{
+            width: auto !important;
+        }
+        .text{
+            margin: 0 auto;
+            width: 100%;
+            text-align: center;
+            
+            .main{
+                padding: 15vw 2vw 5vw 2vw !important;
+                width: 100%;
+            }
+            .subtitle{
+                padding: 2vw !important;
+                width: 100%;
+            }
+            button{
+                background-color: white;
+                color: $PrimaryViolet;
+                width: 60%;
+            }
+        }
+    }
+}
